@@ -1,0 +1,13 @@
+
+.content{
+height: 25%;
+background-color: black ;
+display: flex;
+}
+
+.content img{
+width: 80px;
+border: 1px solid grey;
+border-radius: 50%;
+}
+
