@@ -1,13 +1,21 @@
 
 import classes from './MyPosts.module.css';
+import Post from './Post/Post';
+
 
 
 function MyPosts() {
-  return (
-	<div className= {classes.posts} > my post
-	<div className= {classes.item}> post1</div>
-	<div className= {classes.item}> post2</div>
-	</div>
+return (
+	<div className= {classes.posts} >
+	<textarea></textarea> <button>...</button>
+
+<Post message= 'Hi, how are you?' count='5'/>
+<Post message= 'Its my first post' count='3'/>
+<Post message= 'Hello' count='2' />
+<Post message= 'My name is Anton' count='7' />
+
+
+</div>
 	);
 }
 

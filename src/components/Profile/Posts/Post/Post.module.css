@@ -1,11 +1,9 @@
-
-.content{
-height: 25%;
-background-color: black ;
-display: flex;
+.item{
+color: white;
 }
 
-.content img{
+
+.item img{
 width: 70px;
 height: 70px;
 border: 1px solid grey;
