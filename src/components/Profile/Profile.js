@@ -6,7 +6,7 @@ import MyPosts from './Posts/MyPosts';
 
 function Profile() {
   return (
-<div className= {classes.content}>
+<div>
 	<Stories/>
 	<MyPosts/>
 </div>	
