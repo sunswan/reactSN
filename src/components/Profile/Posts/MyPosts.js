@@ -5,10 +5,8 @@ import Post from './Post/Post';
 
 
 function MyPosts() {
-return (
-	<div className= {classes.posts} >
-	<textarea></textarea> <button>...</button>
-
+return (	<div className= {classes.posts} >
+	
 <Post message= 'Hi, how are you?' count='5'/>
 <Post message= 'Its my first post' count='3'/>
 <Post message= 'Hello' count='2' />

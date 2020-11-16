@@ -14,7 +14,7 @@ function App() {
 			<Nav/>
 		<div className='app-wrapper-content'> 
 			<Route path="/profile" component={Profile} />
-			<Route path="/dialogs"component={Dialogs} />
+			<Route exact path="/dialogs"component={Dialogs} />
 		</div>
 		</div>
 	</BrowserRouter>
