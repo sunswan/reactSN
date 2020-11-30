@@ -2,4 +2,19 @@
 padding: 10px;
 }
 
+.postButton{
+	background-color: #2A687E;
+	color: #401641;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+}
+
+.postForm{
+	background-color: #1B3550;
+	color: #BAC7E8;
+
+}
+
 
