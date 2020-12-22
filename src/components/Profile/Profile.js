@@ -5,12 +5,13 @@ import MyPosts from './Posts/MyPosts';
 import ProfileInfo from '../Profile/ProfileInfo/ProfileInfo';
 
 
-const Profile = () => {
-  return (
+const Profile = (props) => {
+
+return (
 <div>
 	<Stories/>
 	<ProfileInfo />
-	<MyPosts/>
+	<MyPosts posts={props.posts}/>
 </div>	
 
 	);
