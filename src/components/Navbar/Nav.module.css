@@ -1,0 +1,20 @@
+.nav{
+	grid-area: n;
+	background: linear-gradient(180deg, #062060, #080e36);
+	padding: 20px;
+}
+
+.item a{
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px, 
+}
+
+.item a.activeLink{
+	color: #46acc6;
+}
+
+.item:last-child {
+	margin-top: 70px;
+	font-size: 30px;
+}
