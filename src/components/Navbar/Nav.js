@@ -9,6 +9,8 @@ function Nav() {
 		<div className={classes.item}> <NavLink to='/news' activeClassName={classes.activeLink}> News </NavLink> </div>
 		<div className={classes.item}> <NavLink to='/music' activeClassName={classes.activeLink}> Music </NavLink></div>
 		<div className={`${classes.item} ${classes.active}`}> <NavLink to='/settings' activeClassName={classes.activeLink}> Settings </NavLink></div>
+		<div className={classes.item}> <NavLink to='/friends' activeClassName={classes.activeLink}> Friends </NavLink></div>
+
 	</nav>
   	);
 }

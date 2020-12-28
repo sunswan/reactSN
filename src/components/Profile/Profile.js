@@ -11,7 +11,7 @@ return (
 <div>
 	<Stories/>
 	<ProfileInfo />
-	<MyPosts posts={props.posts}/>
+	<MyPosts posts={props.state.posts}/>
 </div>	
 
 	);

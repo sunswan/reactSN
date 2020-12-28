@@ -9,10 +9,10 @@
 
 	grid-template-rows: 60px 1fr;
 	grid-template-columns: 2fr 10fr;
-	grid-gap: 5px;
 }
 
 .app-wrapper-content{
 	grid-area: c;
-	background-color: cornflowerblue;
+	background: linear-gradient(180deg, #042062, #080e36);
+	height: 100vh;
 }
