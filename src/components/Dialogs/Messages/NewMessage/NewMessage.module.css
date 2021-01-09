@@ -1,0 +1,17 @@
+.newMessage {
+  padding: 10px;
+}
+
+.messageButton {
+  background-color: #2a687e;
+  color: #401641;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.messageForm {
+  background-color: #1b3550;
+  color: #bac7e8;
+}

@@ -1,7 +1,7 @@
 import classes from './Dialogs.module.css'
-import {NavLink} from "react-router-dom";
 import DialogItem from './DialogItem/DialogItem.js';
 import Messages from './Messages/Messages.js';
+import NewMessage from './Messages/NewMessage/NewMessage';
 
 
 const Dialogs = (props) => {
@@ -19,7 +19,9 @@ let messagesElements = props.state.messages.map (m => <Messages message={m.messa
 		<div className={classes.messages}> 
 			{messagesElements}
     	</div>
-			
+
+		<NewMessage/>
+
 	</div>
 	);
 }
