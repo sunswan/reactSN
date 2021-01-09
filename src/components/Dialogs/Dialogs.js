@@ -6,8 +6,10 @@ import NewMessage from './Messages/NewMessage/NewMessage';
 
 const Dialogs = (props) => {
 
-let dialogsElements = props.state.dialogs.map (d => <DialogItem name={d.name} id={d.id} avatar={d.avatar} />)
-let messagesElements = props.state.messages.map (m => <Messages message={m.message}/>)
+let dialogsElements = props.dialogsPage.dialogs.map 
+(d => <DialogItem name={d.name} />)
+let messagesElements = props.dialogsPage.messages.map 
+(m => <Messages message={m.message}/>)
 
 
 	return (
@@ -20,7 +22,10 @@ let messagesElements = props.state.messages.map (m => <Messages message={m.messa
 			{messagesElements}
     	</div>
 
-		<NewMessage/>
+		<NewMessage
+		newMessageText={props.dialogsPage.newMessageText} 
+		updateNewMessageText={props.updateNewMessageText}
+		addMessage={props.addMessage}/>
 
 	</div>
 	);

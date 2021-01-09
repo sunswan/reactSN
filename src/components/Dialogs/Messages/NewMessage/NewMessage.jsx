@@ -1,25 +1,37 @@
 import React from "react";
 import classes from "./NewMessage.module.css";
 
-const NewMessage = () => { 
+const NewMessage = (props) => {
+  let newMessageElement = React.createRef();
 
-    let newMessageElement = React.createRef();
+  let addMessage = () => {
+    props.addMessage();
+  };
 
-    let addMessage = () => {
-      let text = newMessageElement.current.value;
-      alert(text);
-    };
+  let onMessageChange = () => {
+    let newmessage = newMessageElement.current.value;
+    props.updateNewMessageText(newmessage);
+  };
 
   return (
-    <div className={classes.newMessage}>
-      <textarea ref={newMessageElement} className={classes.messageForm}></textarea>
+    <div 
+    className={classes.newMessage}>
+      <textarea
+        onChange={onMessageChange}
+        ref={newMessageElement}
+        className={classes.messageForm}
+        value={props.newMessageText}
+
+      />
       <div>
-        <button onClick={addMessage} className={classes.messageButton}>
+        <button 
+        onClick={addMessage} 
+        className={classes.messageButton}>
           Add message
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default NewMessage;
