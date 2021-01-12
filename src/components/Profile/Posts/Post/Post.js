@@ -6,7 +6,7 @@ function Post(props) {
   return (
 
 	<div className= {classes.item}> 
-	<img src='https://proprikol.ru/wp-content/uploads/2020/02/kartinki-na-avatarku-dlya-parnej-i-muzhchin-1-1.jpg'/> 
+	<img src='https://avavatar.ru/images/original/2/QMET7Go6mgVpZAiq.jpg'/> 
 	
 	{props.message}
     

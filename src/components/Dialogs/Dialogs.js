@@ -24,8 +24,7 @@ let messagesElements = props.dialogsPage.messages.map
 
 		<NewMessage
 		newMessageText={props.dialogsPage.newMessageText} 
-		updateNewMessageText={props.updateNewMessageText}
-		addMessage={props.addMessage}/>
+		dispatch={props.dispatch}/>
 
 	</div>
 	);

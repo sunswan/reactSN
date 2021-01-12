@@ -1,9 +1,6 @@
 
-let rerenderEntireTree = () => {
-  console.log('state was changed');
-}
-
-let state = {
+let store = {
+_state: {
   profilePage: {
     posts: [
       { id: 1, message: "Hi, how are you?", likesCount: 5 },
@@ -37,43 +34,54 @@ let state = {
       { id: 7, name: "Diana" },
     ],
   },
-};
+},
+_callSubscriber () {
+  console.log('state was changed');
+},
 
-window.state = state;
+getState (){
+  return this._state;
+},
+subscribe (observer) {
+  this._callSubscriber = observer;
+},
 
-export const addPost = () => {
+_addPost () {
   let newPost = {
     id: 5,
-    message: state.profilePage.newPostText,
+    message: this._state.profilePage.newPostText,
     likesCount: 0,
   };
-  state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = '';
-  rerenderEntireTree(state);
-};
-
-export const addMessage = () => {
+  this._state.profilePage.posts.push(newPost);
+  this._state.profilePage.newPostText = '';
+  this._callSubscriber(this._state);
+},
+_addMessage () {
   let addMessage = {
     id: 8,
-    message: state.dialogsPage.newMessageText,
+    message: this._state.dialogsPage.newMessageText,
   };
-  state.dialogsPage.messages.push(addMessage);
-  state.dialogsPage.newMessageText = '';
-  rerenderEntireTree(state);
-};
-
-export const updateNewPostText = (newText) => {
-  state.profilePage.newPostText = newText;
-  rerenderEntireTree(state);
-};
-
-export const updateNewMessageText = (newMessage) => {
-  state.dialogsPage.newMessageText = newMessage;
-  rerenderEntireTree(state);
-};
-
-export const subscribe = (observer) => {
-  rerenderEntireTree = observer;
+  this._state.dialogsPage.messages.push(addMessage);
+  this._state.dialogsPage.newMessageText = '';
+  this._callSubscriber(this._state);
+},
+_updateNewPostText (newText) {
+  this._state.profilePage.newPostText = newText;
+  this._callSubscriber(this._state);
+},
+_updateNewMessageText (newMessage) {
+  this._state.dialogsPage.newMessageText = newMessage;
+  this._callSubscriber(this._state);
+},
+dispatch(action)
+{switch (action.type) {
+  case 'ADD-POST': this._addPost(); break;
+  case 'ADD-MESSAGE': this._addMessage(); break;
+  case 'UPDATE-NEW-POST-TEXT': this._updateNewPostText(action.newPostText); break;
+  case 'UPDATE-NEW-MESSAGE-TEXT': this._updateNewMessageText(action.newMessageText); break;
+}
+}
 }
 
-export default state;
+window.state = store;
+export default store;
