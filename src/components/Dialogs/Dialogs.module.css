@@ -1,30 +1,47 @@
-.dialogs{
-display: grid;
-grid-template-columns: 2fr 10fr;
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
 }
 
-.dialogsItems{
-padding: 10px;
+.dialogsItems {
+  padding: 10px;
 }
 
 .dialogsItems a {
-text-decoration: none;
-color: #46acc6;
-	}
-
-.dialogsItems .active{
-	color: gold;
+  text-decoration: none;
+  color: #46acc6;
 }
 
-.messages{
-padding: 10px;
-color: aliceblue;
+.dialogsItems .active {
+  color: gold;
 }
 
-.message img{
-width: 70px;
-height: 70px;
-border: 1px solid grey;
-border-radius: 50%;
-margin: 6px;
+.messages {
+  padding: 10px;
+  color: aliceblue;
+}
+
+.message img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  margin: 6px;
+}
+.newMessage {
+  padding: 10px;
+}
+
+.messageButton {
+  background-color: #2a687e;
+  color: #401641;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.messageForm {
+  background-color: #1b3550;
+  color: #bac7e8;
 }
