@@ -1,16 +1,18 @@
 import React from "react";
 import classes from "./NewMessage.module.css";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from "./../../../../redux/dialogs-reducer";
 
 const NewMessage = (props) => {
   let newMessageElement = React.createRef();
 
   let addMessage = () => {
-    props.dispatch({type: 'ADD-MESSAGE'});
+    props.dispatch(addMessageActionCreator());
   };
 
   let onMessageChange = () => {
     let newmessage = newMessageElement.current.value;
-    props.dispatch({type: 'UPDATE-NEW-MESSAGE-TEXT', newmessage});
+    let action = updateNewMessageTextActionCreator(newmessage)
+    props.dispatch(action);
   };
 
   return (
@@ -21,7 +23,6 @@ const NewMessage = (props) => {
         ref={newMessageElement}
         className={classes.messageForm}
         value={props.newMessageText}
-
       />
       <div>
         <button 
